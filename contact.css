@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: url('texture.jpg') no-repeat center center/cover; 
+    position: relative;
+    overflow: auto;
+  }
+  
+  .container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    min-height: 100vh; 
+    position: relative;
+    background: rgba(255, 255, 255, 0.7); 
+  }
+  
+  .container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, #d4cca5, #e1e1e1);
+    z-index: -1;
+    opacity: 0.2; 
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9% 1rem 5%;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: whitesmoke;
+  }
+  
+  .logo {
+    font-size: 5rem;
+    color: rgb(101, 84, 84);
+    font-weight: 800;
+    cursor: pointer;    
+    text-decoration: none;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  nav a {
+    font-size: 2rem;
+    color: rgb(140, 118, 118);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: rgb(58, 51, 51);
+    border-bottom: 3px solid gb(58, 51, 51);
+}
+
+nav a:hover {
+    color: rgb(58, 51, 51);
+    border-bottom: 3px solid rgb(58, 51, 51);
+}
+
+
+.social-icon {
+    margin-top: 1rem;
+}
+
+.social-icon a {
+    color: rgb(101, 84, 84);
+    font-size: 4rem;
+    margin-right: 1rem;
+    transition: 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+    background: rgba(240, 240, 240, 0.9);
+    width: 100%;
+    margin-top: auto;
+}
+
+.contact-section {
+    padding: 2rem 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 70%;
+    margin: 11rem auto 3rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: rgb(101, 84, 84);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
